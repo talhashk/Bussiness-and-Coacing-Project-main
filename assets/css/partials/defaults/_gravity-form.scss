@@ -1,0 +1,229 @@
+.gform_wrapper {
+	ul {
+		margin: 0;
+
+		li {
+			list-style-type: none;
+			background: none;
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+.gfields {
+	margin: 0;
+}
+
+.gfield {
+	box-sizing: border-box;
+	margin-bottom: 0;
+	position: relative;
+}
+
+.page-content,
+.gfields {
+	ul {
+		li {
+			&.gfield.half-input-field {
+				width: 48%;
+				margin-right: 1.5%;
+				display: inline-block;
+			}
+
+			&.gfield {
+				list-style-image: none;
+				padding-left: 0;
+				float: none;
+				width: 100%;
+				list-style: none;
+			}
+		}
+	}
+}
+.gfield label {
+	display: block;
+	@include font(open, med, weight);
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: map-get($colors, dgray);
+}
+.gfield_checkbox,
+.gfield_radio {
+	padding-bottom: 2rem !important;
+	margin-bottom: 3rem !important;
+	li {
+		position: relative;
+		padding-left: 40px !important;
+		margin-bottom: 20px !important;
+		label {
+			&:after {
+				content: "";
+				width: 20px;
+				height: 20px;
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 2px;
+				border-radius: 3px;
+				z-index: 0;
+				border: 1px solid rgba(109, 122, 135, 0.3);
+			}
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 2px !important;
+				top: 4px;
+				width: 16px;
+				height: 16px;
+				// background-image: url(../img/checkbox-check.svg);
+				// background-repeat: no-repeat;
+				// background-position: center center;
+				background-color: map-get($map: $colors, $key: black);
+				@include border-radius(4px);
+				opacity: 0;
+				z-index: 1;
+				transition: all 100ms;
+			}
+		}
+	}
+}
+#ui-datepicker-div {
+	background-color: #fff !important;
+}
+.ui-datepicker-title select {
+	width: 49%;
+	margin-bottom: 0;
+	background-color: #fff;
+	padding-right: 3rem;
+	margin-right: 2%;
+	height: 56px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+a.ui-datepicker-next.ui-corner-all {
+	float: right;
+}
+.ui-datepicker-header {
+	a,
+	a:visited {
+		font-size: 16px;
+		color: map-get($map: $colors, $key: white);
+		font-weight: 500;
+		cursor: pointer;
+		margin-bottom: 1rem;
+		display: inline-block;
+	}
+}
+select.ui-datepicker-year {
+	margin-right: 0;
+}
+#ui-datepicker-div table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 0 1rem 0;
+	font-size: 16px;
+}
+.ui-datepicker-calendar a {
+	font-size: 16px;
+}
+img.ui-datepicker-trigger {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+.gfield_radio {
+	li {
+		display: inline-block;
+		margin-right: 40px;
+		padding-left: 0 !important;
+		label {
+			display: inline-block;
+			padding-left: 10px;
+		}
+	}
+}
+.ginput_complex {
+	padding-bottom: 2rem !important;
+	margin-bottom: 2rem !important;
+	input {
+		margin-bottom: 0;
+	}
+}
+#ui-datepicker-div table th:nth-child(1) {
+	text-align: center;
+}
+#ui-datepicker-div table th {
+	font-weight: 600;
+	padding: 0.5rem 0.8rem;
+}
+#ui-datepicker-div table td:nth-child(1) {
+	text-align: center;
+}
+#ui-datepicker-div table td {
+	padding: 0.5rem 1.8rem;
+	text-align: center;
+}
+#ui-datepicker-div table tr:nth-child(even) {
+	background-color: #eee;
+}
+#ui-datepicker-div table .gform_review_page tr:nth-child(even) td:nth-child(2) {
+	position: relative;
+	width: 300px !important;
+	max-width: 300px;
+	display: block;
+	background-color: #f1f2e4;
+}
+#ui-datepicker-div table .gform_review_page tr:nth-child(even) td:nth-child(1) {
+	display: none;
+}
+table.ui-datepicker-calendar {
+	max-width: 410px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.55);
+	box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.55);
+}
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+	background-color: map-get($map: $colors, $key: red);
+	padding: 2rem;
+	color: #fff !important;
+}
+.validation_error {
+	background-color: red;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	padding: 2px 10px 6px 10px;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.validation_message {
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	padding: 2px 10px 4px 10px;
+	display: inline-block;
+	color: map-get($colors, red);
+	position: absolute;
+	bottom: 12px;
+}
+
+.gfield_error {
+	input {
+		border-color: map-get($map: $colors, $key: red);
+	}
+}
+
+.gform_confirmation_message {
+	background-color: #fff;
+	padding: 20px;
+	text-align: center;
+	color: green;
+}
+.gform_ajax_spinner {
+}

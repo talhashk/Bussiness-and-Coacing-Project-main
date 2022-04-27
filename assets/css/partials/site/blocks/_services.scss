@@ -1,0 +1,72 @@
+
+.services-head{
+	max-width: 510px;
+	text-align: center;
+	margin: 0 auto;
+
+	h2{
+		line-height:1.5;
+		margin-bottom: 24px;
+	}
+}
+
+.services-description{
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	@include font(ubu,light);
+	p{
+		margin-bottom: 0;
+	}
+}
+
+.services{
+	display: flex;
+	justify-content: space-between;
+}
+
+.service{
+	background-color: map-get($map: $colors, $key:white );
+	width: 387px;
+	border-radius: 20px;
+	box-shadow: 0px 10px 25px rgba(0, 0, 51, 0.04);
+	transition: all 1s;
+}
+.service:hover{
+	box-shadow: 0px 10px 25px rgba(0, 0, 51, 0.08);
+}
+
+.service-img{
+	margin-top: 43px;
+	margin-left: 37px;
+	background-color: map-get($map: $colors, $key: lgreen);
+	border-radius: 7px;
+	margin-bottom: 24px;
+	width: 65px;
+	height: 55px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+
+	img{
+		width: 32px;
+		height: 32px;
+
+	}
+}
+
+.service-head{
+	margin-left: 39px;
+	margin-bottom: 24px;
+}
+
+.service-designation{
+	p{
+		@include font-size(1.3);
+		@include font(ubu , light);
+		margin-left: 39px;
+		margin-bottom: 40px;
+		width: 315px;
+		line-height: 2;
+	}
+}

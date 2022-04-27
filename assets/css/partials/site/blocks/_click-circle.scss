@@ -1,0 +1,46 @@
+.click-circle-content{
+	margin-bottom: 76px;
+	text-align: center;
+	h1{
+		line-height: 1.3;
+		margin-bottom: 24px;
+	}
+	p{
+		@include font(ubu , light);
+		margin-bottom:0;
+	}
+}
+
+
+.check-list{
+	display: flex;
+	margin-bottom: 50px;
+}
+
+.check-list:last-child{
+	margin-bottom: 0;
+}
+
+.check-img{
+	margin-top: 17px;
+	margin-right: 15px;
+}
+
+.check-txt{
+	max-width: 680px;
+	p{
+		margin-bottom: 0;
+		line-height: 1.6;
+		@include font-size(1.8);
+		letter-spacing: -0.2px;
+	}
+}
+
+.check-list-btn{
+	text-align: center;
+	margin-left: 20px;
+	a.button-trans,
+	a.button-trans:visited {
+	  padding: 15px 59px;
+	}
+}

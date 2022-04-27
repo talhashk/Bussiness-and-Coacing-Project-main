@@ -1,0 +1,119 @@
+input[type="text"],
+input[type="password"],
+input[type="search"],
+.input-comments,
+.search-input,
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+input[type="range"] {
+	height: 60px;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid rgba(109, 122, 135, 0.3);
+	outline: none;
+	background-color: map-get($colors, white);
+	@include font-size(1.8);
+	padding: 0 0 0 1.8rem;
+	margin: 0 0 4rem 0;
+	color: map-get($map: $colors, $key: dgray);
+	max-width: 100%;
+	@include font(open, reg, weight);
+	@include transition(all, 0.4s, ease-in-out);
+	@include border-radius(6px);
+
+	&:focus {
+		border: 1px solid map-get($map: $colors, $key: dblue);
+	}
+}
+
+input[type="file"] {
+	padding: 0.9rem;
+}
+
+select {
+	height: 60px;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid rgba(109, 122, 135, 0.3);
+	outline: none;
+	background-color: map-get($colors, white);
+	@include font-size(1.8);
+	padding: 0 0 0 1.8rem;
+	margin: 0 0 4rem 0;
+	color: map-get($map: $colors, $key: dgray);
+	max-width: 100%;
+	@include font(open, reg, family weight);
+	@include transition(all, 0.4s, ease-in-out);
+	@include border-radius(6px);
+	cursor: pointer;
+	-webkit-appearance: none;
+	background-image: url(../img/select-arrows.svg);
+	background-repeat: no-repeat;
+	background-position: center right 17px;
+
+	&:focus {
+		border: 1px solid map-get($map: $colors, $key: dblue);
+	}
+}
+
+option {
+	font-weight: 300 !important;
+}
+
+input[type="range"] {
+	padding: 0;
+	border: none;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	border: 1px solid rgba(109, 122, 135, 0.3);
+	color: map-get($map: $colors, $key: dgray);
+	padding: 1rem 0 0 1.8rem;
+	margin: 0 0 4rem 0;
+	box-sizing: border-box;
+	@include font(open, reg, family weight);
+	background-color: map-get($colors, white);
+	@include font-size(1.8);
+	outline: none;
+	@include transition(all, 0.4s, ease-in-out);
+	height: 160px;
+	resize: none;
+	@include border-radius(6px);
+
+	&:focus {
+		border: 1px solid map-get($map: $colors, $key: dblue);
+	}
+}
+
+
+input[type="checkbox"] {
+	opacity: 0;
+	outline: none;
+	z-index: 100;
+	width: 27px;
+	height: 27px;
+	top: 0;
+	left: 0;
+	position: absolute;
+	appearance: none;
+	cursor: pointer;
+	+ label {
+		cursor: pointer;
+		@include font(open, reg, weight);
+	}
+	&:checked + label {
+		&:before {
+			opacity: 1;
+		}
+		&:after {
+			border: 1px solid map-get($map: $colors, $key: lblue);
+			background: map-get($map: $colors, $key: lblue);
+		}
+	}
+}
